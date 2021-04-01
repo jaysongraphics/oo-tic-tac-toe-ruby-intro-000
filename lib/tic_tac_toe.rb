@@ -27,6 +27,10 @@ class TicTacToe
     @board[location.to_i - 1] = character
   end
 
+  def input_to_index(user_input)
+      user_input.to_i - 1
+  end
+
   def position_taken?(position)
     if @board[position] == "X" || @board[position] == "O"
       true
@@ -105,10 +109,6 @@ end
           else
             nil
           end
-          
-          def input_to_index(user_input)
-  user_input.to_i - 1
-end
 
     end
   end
